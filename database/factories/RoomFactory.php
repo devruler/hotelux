@@ -14,7 +14,7 @@ $factory->define(Room::class, function (Faker $faker) {
     $numberOfImages = $faker->randomElement([2, 3]);
     $i = 0;
     for($numberOfImages; $i <= $numberOfImages; $i++){
-        $images[] = $faker->file('C:\Users\Admin\Desktop\room_images', public_path('/images/rooms'), false);
+        $images[] = $faker->file('C:\Users\hp\Desktop\room_images', public_path('/images/rooms'), false);
     }
 
     return [

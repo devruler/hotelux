@@ -15,11 +15,10 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('customer_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('room_id')->constrained()->cascadeOnDelete();
             $table->integer('guests');
             $table->dateTime('check_in');
             $table->dateTime('check_out');
+            $table->foreignId('room_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
