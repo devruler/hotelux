@@ -1,7 +1,7 @@
 <template>
   <div>
       <div class="modal" id="new-room" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-dialog modal-dialog-centered  modal-lg">
 
                 <div class="modal-content rounded-0">
 <form action="#" method="post" @submit.prevent="storeRoom(newRoom.id)">

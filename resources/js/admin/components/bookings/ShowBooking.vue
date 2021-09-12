@@ -1,7 +1,7 @@
 <template>
   <div>
       <div class="modal" id="showBooking" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" v-if="booking.id">
+        <div class="modal-dialog modal-dialog-centered  modal-lg" v-if="booking.id">
             <div class="modal-content rounded-0">
             <div class="modal-header">
                 <h5 class="modal-title">Booking #{{booking.id}}</h5>

@@ -1,7 +1,7 @@
 <template>
   <div>
       <div class="modal" id="showReview" tabindex="-1" >
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" v-if="review.id">
+        <div class="modal-dialog modal-dialog-centered " v-if="review.id">
             <div class="modal-content rounded-0">
             <div class="modal-header">
                 <h5 class="modal-title">Review #{{review.id}}</h5>

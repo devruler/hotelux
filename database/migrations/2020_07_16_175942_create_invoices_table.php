@@ -17,7 +17,7 @@ class CreateInvoicesTable extends Migration
             $table->id();
             $table->foreignId('booking_id')->constrained()->cascadeOnDelete();
             $table->float('total');
-            $table->float('payment_type');
+            $table->string('payment_type');
             $table->string('status');
             $table->timestamps();
         });

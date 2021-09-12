@@ -25319,7 +25319,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.bg-green[data-v-d095bc6c] {\r\n    background-color: #ABC32F\n}\n.card[data-v-d095bc6c]{\r\n    height: 180px\n}\n.revenue[data-v-d095bc6c]{\r\n    font-size: 36px;\r\n    margin: 5px 0 0 0 ;\n}\r\n", ""]);
+exports.push([module.i, "\n.bg-green[data-v-d095bc6c] {\n    background-color: #ABC32F\n}\n.card[data-v-d095bc6c]{\n    height: 180px\n}\n.revenue[data-v-d095bc6c]{\n    font-size: 36px;\n    margin: 5px 0 0 0 ;\n}\n", ""]);
 
 // exports
 
@@ -79866,10 +79866,7 @@ var render = function() {
         _vm.booking.id
           ? _c(
               "div",
-              {
-                staticClass:
-                  "modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
-              },
+              { staticClass: "modal-dialog modal-dialog-centered  modal-lg" },
               [
                 _c("div", { staticClass: "modal-content rounded-0" }, [
                   _c("div", { staticClass: "modal-header" }, [
@@ -80131,10 +80128,7 @@ var render = function() {
       [
         _c(
           "div",
-          {
-            staticClass:
-              "modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
-          },
+          { staticClass: "modal-dialog modal-dialog-centered  modal-lg" },
           [
             _c("div", { staticClass: "modal-content rounded-0" }, [
               _c(
@@ -80670,7 +80664,11 @@ var render = function() {
           _vm._v("\n                Revenue (This month)\n                "),
           _c("div", { staticClass: "d-flex" }, [
             _c("span", { staticClass: "revenue" }, [
-              _vm._v(_vm._s(_vm.counts.revenue) + " "),
+              _vm._v(
+                _vm._s(
+                  _vm.counts.revenue ? _vm.counts.revenue.toFixed(2) : null
+                ) + " "
+              ),
               _c("span", [_vm._v("$")])
             ])
           ])
@@ -80792,149 +80790,142 @@ var render = function() {
       { staticClass: "modal", attrs: { id: "showReview", tabindex: "-1" } },
       [
         _vm.review.id
-          ? _c(
-              "div",
-              {
-                staticClass:
-                  "modal-dialog modal-dialog-centered modal-dialog-scrollable"
-              },
-              [
-                _c("div", { staticClass: "modal-content rounded-0" }, [
-                  _c("div", { staticClass: "modal-header" }, [
-                    _c("h5", { staticClass: "modal-title" }, [
-                      _vm._v("Review #" + _vm._s(_vm.review.id))
-                    ]),
-                    _vm._v(" "),
-                    _vm._m(0)
+          ? _c("div", { staticClass: "modal-dialog modal-dialog-centered " }, [
+              _c("div", { staticClass: "modal-content rounded-0" }, [
+                _c("div", { staticClass: "modal-header" }, [
+                  _c("h5", { staticClass: "modal-title" }, [
+                    _vm._v("Review #" + _vm._s(_vm.review.id))
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "modal-body" }, [
-                    _c("div", { staticClass: "row" }, [
-                      _c("div", { staticClass: "col-12 mb-3" }, [
-                        _c("p", [
-                          _c("strong", [_vm._v("Customer:")]),
-                          _vm._v(
-                            " " +
-                              _vm._s(
-                                _vm.review.user.first_name +
-                                  " " +
-                                  _vm.review.user.last_name
-                              )
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _c("strong", [_vm._v("Email:")]),
-                          _vm._v(" " + _vm._s(_vm.review.user.email))
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _c("strong", [_vm._v("Phone:")]),
-                          _vm._v(" " + _vm._s(_vm.review.user.phone))
-                        ])
+                  _vm._m(0)
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "modal-body" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-12 mb-3" }, [
+                      _c("p", [
+                        _c("strong", [_vm._v("Customer:")]),
+                        _vm._v(
+                          " " +
+                            _vm._s(
+                              _vm.review.user.first_name +
+                                " " +
+                                _vm.review.user.last_name
+                            )
+                        )
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "col-12 mb-3" }, [
-                        _c("p", [
-                          _c("strong", [_vm._v("Rating:")]),
-                          _vm._v(" " + _vm._s(_vm.review.rating) + " "),
-                          _c("i", { staticClass: "fas fa-star text-warning" })
-                        ]),
-                        _vm._v(" "),
-                        _vm._m(1),
-                        _vm._v(" "),
-                        _c("div", {
-                          staticClass: "border py-3 mb-4 px-3",
-                          domProps: { innerHTML: _vm._s(_vm.review.comment) }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "btn btn-warning text-white rounded-0 btn-sm",
-                            attrs: {
-                              target: "_blank",
-                              href: "/rooms/" + _vm.review.room.slug
-                            }
-                          },
-                          [_vm._v("View Room")]
-                        )
+                      _c("p", [
+                        _c("strong", [_vm._v("Email:")]),
+                        _vm._v(" " + _vm._s(_vm.review.user.email))
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("strong", [_vm._v("Phone:")]),
+                        _vm._v(" " + _vm._s(_vm.review.user.phone))
                       ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-12 mb-3" }, [
+                      _c("p", [
+                        _c("strong", [_vm._v("Rating:")]),
+                        _vm._v(" " + _vm._s(_vm.review.rating) + " "),
+                        _c("i", { staticClass: "fas fa-star text-warning" })
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(1),
+                      _vm._v(" "),
+                      _c("div", {
+                        staticClass: "border py-3 mb-4 px-3",
+                        domProps: { innerHTML: _vm._s(_vm.review.comment) }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "btn btn-warning text-white rounded-0 btn-sm",
+                          attrs: {
+                            target: "_blank",
+                            href: "/rooms/" + _vm.review.room.slug
+                          }
+                        },
+                        [_vm._v("View Room")]
+                      )
                     ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "modal-footer" }, [
-                    _c(
-                      "button",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: !_vm.review.is_approved,
-                            expression: "!review.is_approved"
-                          }
-                        ],
-                        staticClass: "btn btn-success rounded-0",
-                        attrs: { type: "button" },
-                        on: {
-                          click: function($event) {
-                            $event.preventDefault()
-                            return (function() {
-                              return _vm.$emit("approve", _vm.review.id)
-                            })($event)
-                          }
-                        }
-                      },
-                      [_vm._v("Approve")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.review.is_approved,
-                            expression: "review.is_approved"
-                          }
-                        ],
-                        staticClass: "btn btn-secondary rounded-0",
-                        attrs: { type: "button" },
-                        on: {
-                          click: function($event) {
-                            $event.preventDefault()
-                            return (function() {
-                              return _vm.$emit("reject", _vm.review.id)
-                            })($event)
-                          }
-                        }
-                      },
-                      [_vm._v("Reject")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-danger rounded-0",
-                        attrs: { type: "button" },
-                        on: {
-                          click: function($event) {
-                            $event.preventDefault()
-                            return (function() {
-                              return _vm.$emit("delete", _vm.review.id)
-                            })($event)
-                          }
-                        }
-                      },
-                      [_vm._v("Delete")]
-                    )
                   ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "modal-footer" }, [
+                  _c(
+                    "button",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: !_vm.review.is_approved,
+                          expression: "!review.is_approved"
+                        }
+                      ],
+                      staticClass: "btn btn-success rounded-0",
+                      attrs: { type: "button" },
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          return (function() {
+                            return _vm.$emit("approve", _vm.review.id)
+                          })($event)
+                        }
+                      }
+                    },
+                    [_vm._v("Approve")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.review.is_approved,
+                          expression: "review.is_approved"
+                        }
+                      ],
+                      staticClass: "btn btn-secondary rounded-0",
+                      attrs: { type: "button" },
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          return (function() {
+                            return _vm.$emit("reject", _vm.review.id)
+                          })($event)
+                        }
+                      }
+                    },
+                    [_vm._v("Reject")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-danger rounded-0",
+                      attrs: { type: "button" },
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          return (function() {
+                            return _vm.$emit("delete", _vm.review.id)
+                          })($event)
+                        }
+                      }
+                    },
+                    [_vm._v("Delete")]
+                  )
                 ])
-              ]
-            )
+              ])
+            ])
           : _vm._e()
       ]
     )
@@ -80996,10 +80987,7 @@ var render = function() {
       [
         _c(
           "div",
-          {
-            staticClass:
-              "modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
-          },
+          { staticClass: "modal-dialog modal-dialog-centered  modal-lg" },
           [
             _c("div", { staticClass: "modal-content rounded-0" }, [
               _c(
@@ -81366,26 +81354,6 @@ var render = function() {
                         [
                           _c("i", { staticClass: "fas fa-eye" }),
                           _vm._v(" View")
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-default rounded-0 btn-sm",
-                          attrs: { href: "#" },
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              return _vm.confirmBooking()
-                            }
-                          }
-                        },
-                        [
-                          _c("i", { staticClass: "fas fa-check" }),
-                          _vm._v(" Confirm")
                         ]
                       )
                     ])

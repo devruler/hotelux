@@ -33,7 +33,7 @@
                 <div class="card-body">
                     Revenue (This month)
                     <div class="d-flex">
-                    <span class="revenue">{{counts.revenue}} <span>$</span></span>
+                    <span class="revenue">{{counts.revenue ? counts.revenue.toFixed(2) : null}} <span>$</span></span>
 
                     </div>
                 </div>

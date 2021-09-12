@@ -2,7 +2,7 @@
 <div>
     <!-- EDIT CUSTOMER MODAL -->
     <div class="modal fade" id="editCustomer" tabindex="-1" aria-labelledby="editCustomerLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-dialog modal-dialog-centered  modal-lg">
             <div class="modal-content rounded-0">
                 <form @submit.prevent="editCustomer">
                     <div class="modal-header">

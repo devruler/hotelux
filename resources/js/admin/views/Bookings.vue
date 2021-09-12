@@ -29,7 +29,7 @@
                             <td>{{new Date(booking.created_at).toDateString()}}</td>
                             <td><span :class="['badge', booking.invoice ? (booking.invoice.status ? 'badge-success' : 'badge-danger') : 'badge-default']" >{{booking.invoice ? (booking.invoice.status ? 'Paid' : 'Unpaid') : 'N/A'}}</span></td>
                             <td><a class="btn btn-default rounded-0 btn-sm" href="#" @click.prevent="showBooking(booking)"><i class="fas fa-eye"></i> View</a></td>
-                            <td><a class="btn btn-default rounded-0 btn-sm" href="#" @click.prevent="confirmBooking()"><i class="fas fa-check"></i> Confirm</a></td>
+                            <!-- <td><a class="btn btn-default rounded-0 btn-sm" href="#" @click.prevent="confirmBooking()"><i class="fas fa-check"></i> Confirm</a></td> -->
                         </tr>
 
                     </tbody>
